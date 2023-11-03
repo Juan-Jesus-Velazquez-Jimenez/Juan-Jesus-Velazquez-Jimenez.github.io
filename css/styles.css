@@ -1,0 +1,264 @@
+header {
+    position: relative;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    padding: 7rem 0 3rem;
+    height: 100vh;
+}
+
+body {
+    background-color: honeydew;
+}
+
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: -webkit-fill-available;
+    opacity: 0.1;
+    left: 0;
+    top: 0;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+img#me {
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 641px) {
+    me {
+        display: none;
+    }
+}
+
+body {
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, dodgerblue, transparent);
+    opacity: 1;
+}
+
+h1, h3 {
+    text-transform: uppercase;
+    margin: 0.67em 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+ul.navbar-nav {
+    align-items: center;
+}
+
+nav.navbar {
+    background-color:dodgerblue;
+    box-shadow: 0 0 10px 1px;
+}
+
+a.nav-link {
+    color: white;
+}
+
+a.navbar-brand {
+    color: white;
+}
+
+button.navbar-toggler {
+    font-size: xx-large;
+    color: white;
+}
+
+section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+h3 {
+    font-size: xx-large;
+    text-transform: uppercase;
+    color: gray;
+}
+
+h4 {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.skill {
+    max-width: 120px;
+    background-color: white;
+    border-radius: 10%;
+}
+
+div.row {
+    margin-bottom: 15px;
+}
+
+section#skillset h3, h5 {
+    color: white;
+}
+
+section#contact h3, h5 {
+    color: white;
+}
+
+section#skillset h4 {
+    color: white !important;
+    margin-bottom: 20px;
+}
+
+section#skillset, section#contact {
+    background-color: dodgerblue;
+}
+
+section#skillset hr, section#contact hr {
+    background-image: linear-gradient(to right, transparent, white, transparent);
+}
+
+@media (min-width: 677px) {
+    section#portfolio {
+        height: 100%;
+    }
+    
+    section#experience {
+        height: 100%;
+    }
+}
+
+.container-imgs {
+    padding: 0 10px;
+    margin-bottom: 5px;
+}
+
+.project-link {
+    cursor: zoom-in;
+    background-color: black;
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+img.project {
+    cursor: zoom-in;
+    max-width: 300px;
+}
+
+img.project:hover {
+    opacity: 0.3;
+    transition: 1s;
+}
+
+.project-title {
+    position: relative;
+    display: none;
+}
+
+a.project-link:hover span {
+    position: relative;
+    bottom: -50px;
+    display: block;
+    height: 0;
+    transition: 2s;
+    font-size: 25px;
+}
+
+button.carousel-control-next:hover {
+    background-image: linear-gradient(to left, black, transparent);
+    transition: 1.5s;
+    opacity: 0.5 !important;
+}
+
+button.carousel-control-prev:hover {
+    background-image: linear-gradient(to right, black, transparent);
+    transition: 1s;
+    opacity: 0.5 !important;
+}
+
+#experience img {
+    border-radius: 25%;
+    border: 5px solid dodgerblue;
+    cursor: pointer;
+    width: 200px;
+    transition: border-radius .3s ease, box-shadow .3s ease;
+}
+
+#experience img:hover {
+    border-radius: 0;
+    box-shadow: 0 0 10px 1px grey;
+}
+
+div.col-sm-4 img {
+    background-color: white;
+}
+
+div.col-sm-4 h4 {
+    color: gray;
+}
+
+h6 {
+    display: none;
+}
+
+img#job-logotype {
+    padding: 2rem 4rem;
+}
+
+.form {
+    width: 60%;
+    margin: 0 20%;
+}
+
+.hide {
+    display: none !important;
+}
+
+.icon-alert {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+#social-contact a {
+    text-decoration: none;
+}
+
+.social-contact {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 1rem;
+}
+
+#linkedin:hover {
+    transition: .3s;
+    background-color: #0288D1;
+}
+
+#gmail:hover {
+    transition: .3s;
+    background-color: red;
+}
+
+footer {
+    background: linear-gradient(#323333, #2a2b2b);
+    padding: 2rem 0;
+    color: white;
+}
+
+#contact > div {
+    padding: 2rem;
+}
