@@ -1,4 +1,4 @@
-header {
+.header {
     position: relative;
     background-color: black;
     color: white;
@@ -211,9 +211,11 @@ img#job-logotype {
     padding: 2rem 4rem;
 }
 
-.form {
-    width: 60%;
-    margin: 0 20%;
+@media (min-width: 415px) {
+    .form {
+        width: 60%;
+        margin: 0 20%;
+    }
 }
 
 .hide {
