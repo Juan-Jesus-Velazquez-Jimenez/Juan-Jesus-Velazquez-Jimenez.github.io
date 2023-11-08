@@ -203,12 +203,28 @@ div.col-sm-4 h4 {
     color: gray;
 }
 
-h6 {
+img#job-logotype {
+    padding: 2rem 4rem;
+}
+
+subtitle {
+    font-size: 1rem;
+    display: none;
+    color: gray;
+}
+
+.subtitle {
     display: none;
 }
 
-img#job-logotype {
-    padding: 2rem 4rem;
+@media (max-width: 991px) {
+    subtitle {
+        display: block !important;
+    }
+
+    .subtitle {
+        display: block !important;
+    }
 }
 
 @media (min-width: 415px) {

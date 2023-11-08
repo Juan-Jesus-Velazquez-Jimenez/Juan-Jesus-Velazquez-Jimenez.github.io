@@ -9,19 +9,22 @@ const _projects = [
         id: "suim",
         name: "SUI.M",
         coverImage: 2,
-        imagesAmount: 27
+        imagesAmount: 27,
+        description: "SUI.M, es un sistema único de información para el manejo, administración y seguimiento de las operaciones diarias de Meccano de México, esta desarrollado en ASP.NET MVC (C#), HTML, CSS, JS, jQuery, Bootstrap y SQL Server."
     },
     {
         id: "sivacop",
         name: "SIVACOP",
-        coverImage: 2,
-        imagesAmount: 39
+        coverImage: 30,
+        imagesAmount: 39,
+        description: "SIVACOP es un sistema para la confirmación de pagos echos con cheque desarrollado para VentAcero, el sistema valida los depositos consultando el/los movimiento(s) mediante la API del banco, si el deposito consultado no tiene fondos se mostrara un mensaje indicandolo, de la misma manera si este deposito ya fue reclamado el sistema indicara que ya ha sido adjudicado para evitar entregar mercancia no pagada o reclamada nuevamente, el proyecto esa desarrollado en ASP.NET Core (C#), HTML, CSS, JS, Bootstrap, jQuery y SQL Server."
     },
     {
         id: "bieeco",
         name: "BIEECO",
         coverImage: 2,
-        imagesAmount: 53
+        imagesAmount: 53,
+        description: "BIEECO es un sistema para el control y registro de la entrada y salida de materiales o residuos peligrosos que son tratados o manipulados por Bienes Ecologicos, esta desarrollado en ASP.NET Core (C#), HTML. CSS, Javascript, jQuery, Bootstrap, SQL Server."
     }
 ];
 
@@ -30,22 +33,25 @@ const _jobs = [
         logotype: "ferre",
         paddingStyle: "padding: 1rem 2.4rem;",
         widthStyle: "auto",
-        name: "FERRE",
-        jobLetterId: null
+        name: "FERRÉ",
+        jobLetterId: null,
+        description: "Trabaje en Desarrollo comercial FERRÉ como Programador Analista en la integración de un nuevo modulo para su sistema SITIC, el cual es una sistema ERP y DMS que esta diseñado específicamente para empresas de distribución, comercialización, centros de servicio, concesionarias de vehículos y empresas transportistas en México y Latinoamérica."
     },
     {
         logotype: "teconline",
         paddingStyle: "padding: 2rem;",
         widthStyle: "inherit",
         name: "Tec Online",
-        jobLetterId: null
+        jobLetterId: null,
+        description: "Trabaje en Tec Online como Programador/Auxiliar de sistemas donde colabore en la implementación de nuevas funcionalidades para un sistema de control de producción para una mueblería, como también en la mejora y corrección de errores reportados por los usuarios del sistema."
     },
     {
         logotype: "itnnovation",
         paddingStyle: "padding: 3rem 1rem;",
         widthStyle: "inherit",
         name: "ITNNOVATION",
-        jobLetterId: "itn"
+        jobLetterId: "itn",
+        description: "Trabaje en ITNNOVATION como Ingeniero de desarrollo donde participe en varios proyectos, uno de ellos fue en un sistema CMS(Content Managament System) para ERICSSON Perú donde yo implemente nuevas características y a su vez corregí los errores reportados por el cliente, otro proyecto donde participe fue en el desarrollo de un sistema para el registro de la entrada y salida de material o residuos peligrosos para Bieeco(Bienes Ecológicos) y en uno de los últimos proyectos en los que colabore fue en el desarrollo de un sistema para la confirmación de pagos o depósitos para VentAcero."
     }
 ];
 
@@ -131,9 +137,8 @@ doc.getElementById("modal-project").addEventListener("show.bs.modal", e => {
                             </div>`;
     }
     
-    hiddenTagsH6();
     doc.getElementById("modal-project-title").innerText = project.name;
-    doc.getElementById("project-description-" + project.id).style.display = "block";
+    doc.getElementById("project-description").innerText = project.description;
     
     carouselProjectsItems.innerHTML = carouselItemsHtml
 });
@@ -143,8 +148,6 @@ doc.getElementById("modal-job").addEventListener("show.bs.modal", e => {
 
     var jobId = link.getAttribute("data-job-id");
     var job = _jobs.find(j => j.logotype == jobId);
-
-    hiddenTagsH6();
 
     var jobLogotype = doc.getElementById("job-logotype");
     var btnJobLetter = doc.getElementById("job-letter");
@@ -168,7 +171,7 @@ doc.getElementById("modal-job").addEventListener("show.bs.modal", e => {
     }
     
     doc.getElementById("modal-job-title").innerText = job.name;
-    doc.getElementById("job-description-" + jobId).style.display = "block";
+    doc.querySelector("#job-description").innerText = job.description;
 });
 
 $(doc).ready(function() {
@@ -179,7 +182,11 @@ $(doc).ready(function() {
         projects += `<a class="project-link" data-bs-toggle="modal" data-bs-target="#modal-project" data-project-id="${project.id}">
                         <span class="project-title">${project.name}</span>
                         <img class="project" src="assets/imgs/${project.id}/${project.coverImage}.jpg" />
-                    </a>`
+                    </a>
+                    <h4 class="text-center subtitle">
+                        ${project.name}
+                        <subtitle>(Toca para ver)</subtitle>
+                    </h4>`
     }
 
     $("#projects").html(projects);
@@ -187,19 +194,15 @@ $(doc).ready(function() {
     for (var job of _jobs) {
         jobs += `<div class="col-sm-4">
                     <img style="${job.paddingStyle}" src="assets/imgs/jobs/${job.logotype}.png" data-bs-toggle="modal" data-bs-target="#modal-job" data-job-id="${job.logotype}" />
-                    <h4 class="text-center">${job.name}</h4>
+                    <h4 class="text-center">
+                        ${job.name}
+                        <subtitle>(Toca para ver)</subtitle>
+                    </h4>
                 </div>`;
     }
 
     $("#jobs").html(jobs);
 });
-
-function hiddenTagsH6(){
-    var tags = doc.getElementsByTagName("h6");
-
-    for (var h6 of tags)
-        h6.style.display = "none";
-}
 
 function selectedSection(link) {
     $("a.nav-link").each(function(index, a){
@@ -223,7 +226,8 @@ function sendEmail() {
     var messageValue = $(messageInput).val();
     var formContact = $("#form-contact");
     var btnSendEmail = $("#btn-send-email");
-    var invalid = false;
+    var invalidEmail = false;
+    var invalidMessage = false;
 
     var complete = function () {
         $(formContact).removeClass("was-validated");
@@ -241,27 +245,26 @@ function sendEmail() {
             if (!$(formContact).hasClass("was-validated"))
                 $(formContact).addClass("was-validated");
 
-            invalid = true;
-        } else {
-            invalid = false;
-        }
+            invalidEmail = true;
+        } else 
+            invalidEmail = false;
     } else {
         if (!$(formContact).hasClass("was-validated"))
             $(formContact).addClass("was-validated");
 
-        invalid = true;
+        invalidEmail = true;
     }
 
     if (messageValue.length == 0) {
         if (!$(formContact).hasClass("was-validated"))
             $(formContact).addClass("was-validated");
         
-        invalid = true;
+        invalidMessage = true;
     } else {
-        invalid = false;
+        invalidMessage = false;
     }
 
-    if (invalid) {
+    if (invalidEmail || invalidMessage) {
         $(btnSendEmail).prop("disabled", false);
         $(btnSendEmail).html(iconSendEmail);
 
