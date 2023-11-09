@@ -140,14 +140,14 @@ section#skillset hr, section#contact hr {
 }
 
 .project-link {
-    cursor: zoom-in;
+    cursor: pointer;
     background-color: black;
     display: inline-block;
     margin: 10px 10px;
 }
 
 img.project {
-    cursor: zoom-in;
+    cursor: pointer;
     max-width: 300px;
 }
 

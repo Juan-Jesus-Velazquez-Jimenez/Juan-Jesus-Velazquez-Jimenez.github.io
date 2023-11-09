@@ -25,6 +25,13 @@ const _projects = [
         coverImage: 2,
         imagesAmount: 53,
         description: "BIEECO es un sistema para el control y registro de la entrada y salida de materiales o residuos peligrosos que son tratados o manipulados por Bienes Ecologicos, esta desarrollado en ASP.NET Core (C#), HTML. CSS, Javascript, jQuery, Bootstrap, SQL Server."
+    },
+    {
+        id: "sivacab",
+        name: "SIVACAB",
+        coverImage: 1,
+        imagesAmount: 43,
+        description: "SIVACAB es un sistema para el calculo de bonos mensuales y trimestrales desarrollado para la empresa VentAcero, el sistema realiza el calculo del monto de los bonos por empleado en base a el/los indicadore(s) y resultados obtenidos y evaluando el % de pago dependiendo del objetivo establecido por indicador, una vez calculado los bonos estos pueden ser exportados a un archivo Excel ya sea bonos por empleado e indicador o bonos por empleado, el proyecto esta desarrollador en ASP.NET MVC (C#), HTML, CSS, JS, Bootstrap, jQuery y SQL Server."
     }
 ];
 
@@ -179,7 +186,7 @@ $(doc).ready(function() {
     var jobs = "";
 
     for (var project of _projects) {
-        projects += `<a class="project-link" data-bs-toggle="modal" data-bs-target="#modal-project" data-project-id="${project.id}">
+        projects += `<a class="project-link" data-bs-toggle="modal" data-bs-target="#modal-project" data-project-id="${project.id}" title="click para ver">
                         <span class="project-title">${project.name}</span>
                         <img class="project" src="assets/imgs/${project.id}/${project.coverImage}.jpg" />
                     </a>
@@ -193,7 +200,7 @@ $(doc).ready(function() {
 
     for (var job of _jobs) {
         jobs += `<div class="col-sm-4">
-                    <img style="${job.paddingStyle}" src="assets/imgs/jobs/${job.logotype}.png" data-bs-toggle="modal" data-bs-target="#modal-job" data-job-id="${job.logotype}" />
+                    <img style="${job.paddingStyle}" src="assets/imgs/jobs/${job.logotype}.png" data-bs-toggle="modal" data-bs-target="#modal-job" data-job-id="${job.logotype}" title="click para ver" />
                     <h4 class="text-center">
                         ${job.name}
                         <subtitle>(Toca para ver)</subtitle>
