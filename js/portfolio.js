@@ -17,7 +17,7 @@ const _projects = [
         name: "SIVACOP",
         coverImage: 30,
         imagesAmount: 39,
-        description: "SIVACOP es un sistema para la confirmación de pagos echos con cheque desarrollado para VentAcero, el sistema valida los depositos consultando el/los movimiento(s) mediante la API del banco, si el deposito consultado no tiene fondos se mostrara un mensaje indicandolo, de la misma manera si este deposito ya fue reclamado el sistema indicara que ya ha sido adjudicado para evitar entregar mercancia no pagada o reclamada nuevamente, el proyecto esa desarrollado en ASP.NET Core (C#), HTML, CSS, JS, Bootstrap, jQuery y SQL Server."
+        description: "SIVACOP es un sistema para la confirmación de pagos echos con cheque desarrollado para la empresa VentAcero, el sistema valida los depositos consultando el/los movimiento(s) mediante la API del banco, si el deposito consultado no tiene fondos se mostrara un mensaje indicandolo, de la misma manera si este deposito ya fue reclamado el sistema indicara que ya ha sido adjudicado para evitar entregar mercancia no pagada o reclamada nuevamente, el proyecto esta desarrollado en ASP.NET Core (C#), HTML, CSS, JS, Bootstrap, jQuery y SQL Server."
     },
     {
         id: "bieeco",
@@ -31,7 +31,7 @@ const _projects = [
         name: "SIVACAB",
         coverImage: 1,
         imagesAmount: 43,
-        description: "SIVACAB es un sistema para el calculo de bonos mensuales y trimestrales desarrollado para la empresa VentAcero, el sistema realiza el calculo del monto de los bonos por empleado en base a el/los indicadore(s) y resultados obtenidos y evaluando el % de pago dependiendo del objetivo establecido por indicador, una vez calculado los bonos estos pueden ser exportados a un archivo Excel ya sea bonos por empleado e indicador o bonos por empleado, el proyecto esta desarrollador en ASP.NET MVC (C#), HTML, CSS, JS, Bootstrap, jQuery y SQL Server."
+        description: "SIVACAB es un sistema para el calculo de bonos mensuales y trimestrales desarrollado para la empresa VentAcero, el sistema realiza el calculo del monto de los bonos por empleado en base a el/los indicador(es) y resultados obtenidos evaluando el % de pago dependiendo del objetivo establecido por indicador, una vez calculado los bonos estos pueden ser exportados a un archivo Excel ya sea bonos por empleado e indicador o bonos por empleado, el proyecto esta desarrollador en ASP.NET MVC (C#), HTML, CSS, JS, Bootstrap, jQuery y SQL Server."
     }
 ];
 
