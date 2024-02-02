@@ -59,6 +59,14 @@ const _jobs = [
         name: "ITNNOVATION",
         jobLetterId: "itn",
         description: "Trabaje en ITNNOVATION como Ingeniero de desarrollo donde participe en varios proyectos, uno de ellos fue en un sistema CMS(Content Managament System) para ERICSSON Perú donde yo implemente nuevas características y a su vez corregí los errores reportados por el cliente, otro proyecto donde participe fue en el desarrollo de un sistema para el registro de la entrada y salida de material o residuos peligrosos para Bieeco(Bienes Ecológicos) y en uno de los últimos proyectos en los que colabore fue en el desarrollo de un sistema para la confirmación de pagos o depósitos para VentAcero."
+    },
+    {
+        logotype: "ventacero",
+        paddingStyle: "padding: 3rem 1rem",
+        widthStyle: "inherit",
+        name: "VentAcero",
+        jobLetterId: null,
+        description: "Trabaje con VentAcero como freelancer en el desarrollo de un sistema para el cálculo automático de bonos semestrales y trimestales que se le paga a todos los empleados de sus nómina y tambien briende soporte a un sistema de confirmación de pagos desarrollado por mi anteriormente cuando estube laborando en la empresa ITNNOVATION."
     }
 ];
 

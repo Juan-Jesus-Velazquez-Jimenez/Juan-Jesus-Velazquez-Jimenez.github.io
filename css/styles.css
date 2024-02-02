@@ -77,6 +77,13 @@ button.navbar-toggler {
     color: white;
 }
 
+div#navbar-offcanvas {
+    background-color: dodgerblue;
+}
+button#offcanvas-btn-close {
+    color: white !important;
+}
+
 section {
     padding-top: 3rem;
     padding-bottom: 3rem;
