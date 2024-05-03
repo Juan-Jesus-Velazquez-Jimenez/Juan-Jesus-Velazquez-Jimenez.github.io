@@ -66,7 +66,7 @@ const _jobs = [
         widthStyle: "inherit",
         name: "VentAcero",
         jobLetterId: null,
-        description: "Trabaje con VentAcero como freelancer en el desarrollo de un sistema para el cálculo automático de bonos semestrales y trimestales que se le paga a todos los empleados de sus nómina y tambien briende soporte a un sistema de confirmación de pagos desarrollado por mi anteriormente cuando estube laborando en la empresa ITNNOVATION."
+        description: "Actualmente sigo colaborando con VentAcero como freelancer en el desarrollo y soporte de un sistema para el cálculo automático de bonos mensuales que se le paga a todos los empleados de sus nómina, como tambien brindar soporte a un sistema de confirmación de pagos desarrollado por mi anteriormente cuando estube laborando en la empresa ITNNOVATION."
     }
 ];
 
@@ -217,6 +217,9 @@ $(doc).ready(function() {
     }
 
     $("#jobs").html(jobs);
+
+    const dateYear = doc.querySelector("date-year");
+    dateYear.innerText = new Date().getFullYear();
 });
 
 function selectedSection(link) {

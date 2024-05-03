@@ -12,64 +12,62 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     </head>
     <body>
-        <header>
-            <nav class="navbar fixed-top navbar-expand-lg">
-                <div class="container-fluid">
-                    <a id="navbar-brand-me" class="navbar-brand" style="display: none;" href="#" onclick="selectedSection(this)">
-                        <span>
-                            <img class="avatar" src="assets/imgs/me.jpg" width="40" height="40" title="Juan Jesús Velázquez Jiménez" />
-                            <small><me id="my-name">Juan Jes&#250;s Vel&#225;zquez Jim&#233;nez |</me> Desarrollador full stack .NET C#</small>
-                        </span>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar-offcanvas" aria-controls="navbar-offcanvas">
-                        &#9776;
-                    </button>
-                    <div id="navbar-offcanvas" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvas-label">
-                        <div class="offcanvas-header">
-                            <h5 id="offcanvas-title-header" class="offcanvas-title">
-                                <span>
-                                    <img class="avatar" src="assets/imgs/me.jpg" width="40" height="40" title="Juan Jesús Velázquez Jiménez" />
-                                    <small>
-                                        Desarrollador full stack .NET C#
-                                    </small>
-                                </span>
-                            </h5>
-                            <button id="offcanvas-btn-close" type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
-                                <i class="bi bi-x-lg"></i>
-                            </button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <div class="nav-item">
-                                    <a id="portfolio-link" class="nav-link" href="#portfolio" onclick="selectedSection(this)" aria-current="page">
-                                        <i class="bi bi-folder"></i>
-                                        Portafolio
-                                    </a>
-                                </div>
-                                <div class="nav-item">
-                                    <a id="skillset-link" class="nav-link" href="#skillset" onclick="selectedSection(this)">
-                                        <i class="bi bi-tools"></i>
-                                        Habilidades
-                                    </a>
-                                </div>
-                                <div class="nav-item">
-                                    <a id="experience-link" class="nav-link" href="#experience" onclick="selectedSection(this)">
-                                        <i class="bi bi-briefcase"></i>
-                                        Experiencia
-                                    </a>
-                                </div>
-                                <div class="nav-item">
-                                    <a id="contact-link" class="nav-link" href="#contact" onclick="selectedSection(this)">
-                                        <i class="bi bi-envelope"></i>
-                                        Contacto
-                                    </a>
-                                </div>
-                            </ul>
-                        </div>
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+                <a id="navbar-brand-me" class="navbar-brand" style="display: none;" href="#" onclick="selectedSection(this)">
+                    <span>
+                        <img class="avatar" src="assets/imgs/me.jpg" width="40" height="40" title="Juan Jesús Velázquez Jiménez" />
+                        <small><me id="my-name">Juan Jes&#250;s Vel&#225;zquez Jim&#233;nez |</me> Desarrollador full stack .NET C#</small>
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbar-offcanvas" aria-controls="navbar-offcanvas">
+                    &#9776;
+                </button>
+                <div id="navbar-offcanvas" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvas-label">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvas-title-header" class="offcanvas-title">
+                            <span>
+                                <img class="avatar" src="assets/imgs/me.jpg" width="40" height="40" title="Juan Jesús Velázquez Jiménez" />
+                                <small>
+                                    Desarrollador full stack .NET C#
+                                </small>
+                            </span>
+                        </h5>
+                        <button id="offcanvas-btn-close" type="button" class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <div class="nav-item">
+                                <a id="portfolio-link" class="nav-link" href="#portfolio" onclick="selectedSection(this)" aria-current="page">
+                                    <i class="bi bi-folder"></i>
+                                    Portafolio
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a id="skillset-link" class="nav-link" href="#skillset" onclick="selectedSection(this)">
+                                    <i class="bi bi-tools"></i>
+                                    Habilidades
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a id="experience-link" class="nav-link" href="#experience" onclick="selectedSection(this)">
+                                    <i class="bi bi-briefcase"></i>
+                                    Experiencia
+                                </a>
+                            </div>
+                            <div class="nav-item">
+                                <a id="contact-link" class="nav-link" href="#contact" onclick="selectedSection(this)">
+                                    <i class="bi bi-envelope"></i>
+                                    Contacto
+                                </a>
+                            </div>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
         
         <main>
             <section id="hero" class="header">
@@ -225,7 +223,7 @@
             </section>
         </main>
         <footer>
-            <small>Desarrollado y diseñado por Juan Jes&#250;s Vel&#225;zquez Jim&#233;nez. &#169;2023. Todos los derechos reservados.</small>
+            <small>Desarrollado y diseñado por Juan Jes&#250;s Vel&#225;zquez Jim&#233;nez. &#169;<date-year></date-year>. Todos los derechos reservados.</small>
         </footer>
         
         <div id="modal-project" class="modal fade" tabindex="-1" aria-labelledby="#modal-project-title" aria-hidden="true">
